@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/screen/Counter.dart';
-import 'BottomNavigationBarWidget.dart';
+import 'components/projects/BottomNavigationBarWidget.dart';
+import 'components/projects/Layout.dart';
 import 'types/NavbarItem.dart';
 import 'types/NavbarItemCollection.dart';
 
@@ -10,19 +11,13 @@ class MyApp extends StatelessWidget {
   static const _collection = NavbarItemCollection(
     items: [
       NavbarItem(
-        icon: Icon(Icons.home),
-        label: 'Home',
-        widget: Center(
-          child: Text('Home'),
-        ),
-      ),
+          icon: Icon(Icons.home),
+          label: 'Home',
+          widget: Layout(title: "Home", body: Center(child: Text('Home')))),
       NavbarItem(
-        icon: Icon(Icons.search),
-        label: 'Search',
-        widget: Center(
-          child: Text('Search'),
-        ),
-      ),
+          icon: Icon(Icons.search),
+          label: 'Search',
+          widget: Layout(title: "Search", body: Center(child: Text('Search')))),
       NavbarItem(
           icon: Icon(Icons.punch_clock),
           label: 'Counter',
@@ -30,9 +25,7 @@ class MyApp extends StatelessWidget {
       NavbarItem(
         icon: Icon(Icons.person),
         label: 'Profile',
-        widget: Center(
-          child: Text('Profile'),
-        ),
+        widget: Layout(title: "Profile", body: Center(child: Text('Profile'))),
       ),
     ],
   );

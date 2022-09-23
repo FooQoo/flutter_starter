@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/components/projects/Layout.dart';
 
 class CounterScreen extends StatefulWidget {
   const CounterScreen({super.key, required this.title});
@@ -40,12 +41,8 @@ class _CounterScreenState extends State<CounterScreen> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
+    return Layout(
+      title: widget.title,
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.

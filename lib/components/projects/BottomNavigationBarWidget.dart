@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'types/NavbarItemCollection.dart';
+import '../../types/NavbarItemCollection.dart';
 
 class BottomNavigationBarWidget extends StatefulWidget {
   const BottomNavigationBarWidget({super.key, required this.collection});
