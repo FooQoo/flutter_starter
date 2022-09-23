@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/screen/Counter.dart';
+import 'package:flutter_starter/screen/MapScreen.dart';
 import 'components/projects/BottomNavigationBarWidget.dart';
 import 'components/projects/Layout.dart';
 import 'types/NavbarItem.dart';
@@ -16,8 +17,8 @@ class MyApp extends StatelessWidget {
           widget: Layout(title: "Home", body: Center(child: Text('Home')))),
       NavbarItem(
           icon: Icon(Icons.search),
-          label: 'Search',
-          widget: Layout(title: "Search", body: Center(child: Text('Search')))),
+          label: 'Map',
+          widget: Layout(title: "Map", body: MapScreen())),
       NavbarItem(
           icon: Icon(Icons.punch_clock),
           label: 'Counter',
