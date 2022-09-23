@@ -44,9 +44,7 @@ app.*.map.json
 /android/app/release
 
 # build
-ios
 linux
 macos
-android
 web
 windows
