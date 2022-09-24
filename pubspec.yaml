@@ -38,6 +38,9 @@ dependencies:
   mapbox_gl: ^0.16.0
   location: ^4.4.0
   flutter_dotenv: ^5.0.2
+  flutter_line_sdk: ^2.3.0
+  flutter_riverpod: ^1.0.4
+  flutter_svg: ^1.1.5
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +69,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - .env
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

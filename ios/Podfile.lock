@@ -1,5 +1,11 @@
 PODS:
   - Flutter (1.0.0)
+  - flutter_line_sdk (2.3.0):
+    - Flutter
+    - LineSDKSwift (~> 5.3)
+  - LineSDKSwift (5.8.2):
+    - LineSDKSwift/Core (= 5.8.2)
+  - LineSDKSwift/Core (5.8.2)
   - location (0.0.1):
     - Flutter
   - Mapbox-iOS-SDK (6.4.1):
@@ -14,11 +20,13 @@ PODS:
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
+  - flutter_line_sdk (from `.symlinks/plugins/flutter_line_sdk/ios`)
   - location (from `.symlinks/plugins/location/ios`)
   - mapbox_gl (from `.symlinks/plugins/mapbox_gl/ios`)
 
 SPEC REPOS:
   trunk:
+    - LineSDKSwift
     - Mapbox-iOS-SDK
     - MapboxAnnotationExtension
     - MapboxMobileEvents
@@ -26,6 +34,8 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
+  flutter_line_sdk:
+    :path: ".symlinks/plugins/flutter_line_sdk/ios"
   location:
     :path: ".symlinks/plugins/location/ios"
   mapbox_gl:
@@ -33,12 +43,14 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  flutter_line_sdk: ffbd219457120ca500b4fba2a5fd818dee21a17a
+  LineSDKSwift: 52bce568988f61f4a529b0ee629525a0cb85b9fe
   location: 3a2eed4dd2fab25e7b7baf2a9efefe82b512d740
   Mapbox-iOS-SDK: f870f83cbdc7aa4a74afcee143aafb0dae390c82
   mapbox_gl: 33c5ab6306cbfa72289bb3606d2cd2e8baee9ff0
   MapboxAnnotationExtension: 4eee6c26349ef6d909f1a23a7eae2d0f7ca5fa7d
   MapboxMobileEvents: 5a172cc9bbf8ac0e45ba86095cbee685ede248cc
 
-PODFILE CHECKSUM: ea5e8c7953b563c2c2a9d3d48380b8f7c3d1cbcd
+PODFILE CHECKSUM: f1b09d2b2219d2d46796130a2b934ae9a9425178
 
 COCOAPODS: 1.10.1

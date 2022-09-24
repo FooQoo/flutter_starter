@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/auth/AuthManager.dart';
 import 'package:flutter_starter/screen/Counter.dart';
+import 'package:flutter_starter/screen/Login.dart';
 import 'package:flutter_starter/screen/MapScreen.dart';
+import 'package:flutter_starter/screen/SignOutScreen.dart';
 import 'components/projects/BottomNavigationBarWidget.dart';
 import 'components/projects/Layout.dart';
 import 'types/NavbarItem.dart';
 import 'types/NavbarItemCollection.dart';
 
-class MyApp extends StatelessWidget {
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   static const _collection = NavbarItemCollection(
@@ -26,14 +31,16 @@ class MyApp extends StatelessWidget {
       NavbarItem(
         icon: Icon(Icons.person),
         label: 'Profile',
-        widget: Layout(title: "Profile", body: Center(child: Text('Profile'))),
+        widget: SignOutScreen(title: "Profile"),
       ),
     ],
   );
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final _authManager = ref.watch(authManagerProvider);
+
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
@@ -48,8 +55,10 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: const BottomNavigationBarWidget(
-          collection: _collection,
-        ));
+        home: _authManager.isLoggedIn
+            ? const BottomNavigationBarWidget(
+                collection: _collection,
+              )
+            : const SignInScreen());
   }
 }
