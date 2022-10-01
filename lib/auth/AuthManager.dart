@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_line_sdk/flutter_line_sdk.dart';
 
 final authManagerProvider = ChangeNotifierProvider<AuthManager>(

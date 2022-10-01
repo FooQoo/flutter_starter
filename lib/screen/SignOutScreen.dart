@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/auth/AuthManager.dart';
 import 'package:flutter_starter/components/projects/Layout.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class SignOutScreen extends ConsumerWidget {
+class SignOutScreen extends HookConsumerWidget {
   const SignOutScreen({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning

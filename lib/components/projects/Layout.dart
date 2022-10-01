@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/components/projects/TopBar.dart';
 
 class Layout extends StatelessWidget {
   final String title;

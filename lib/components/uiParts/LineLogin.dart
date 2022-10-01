@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:flutter_starter/auth/AuthManager.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class LineLogin extends ConsumerWidget {
+class LineLogin extends HookConsumerWidget {
   const LineLogin({super.key});
 
   @override
