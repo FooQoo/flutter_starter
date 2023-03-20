@@ -1,6 +1,6 @@
 PODS:
   - Flutter (1.0.0)
-  - flutter_line_sdk (2.3.0):
+  - flutter_line_sdk (2.3.2):
     - Flutter
     - LineSDKSwift (~> 5.3)
   - LineSDKSwift (5.8.2):
@@ -43,7 +43,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  flutter_line_sdk: ffbd219457120ca500b4fba2a5fd818dee21a17a
+  flutter_line_sdk: ec4b8b8ea31a7a373e3e2f7c11f46ad0f3c6135a
   LineSDKSwift: 52bce568988f61f4a529b0ee629525a0cb85b9fe
   location: 3a2eed4dd2fab25e7b7baf2a9efefe82b512d740
   Mapbox-iOS-SDK: f870f83cbdc7aa4a74afcee143aafb0dae390c82
@@ -51,6 +51,6 @@ SPEC CHECKSUMS:
   MapboxAnnotationExtension: 4eee6c26349ef6d909f1a23a7eae2d0f7ca5fa7d
   MapboxMobileEvents: 5a172cc9bbf8ac0e45ba86095cbee685ede248cc
 
-PODFILE CHECKSUM: f1b09d2b2219d2d46796130a2b934ae9a9425178
+PODFILE CHECKSUM: 04cb028d84f635ad1df06a9ad6db152197aa62b3
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.12.0

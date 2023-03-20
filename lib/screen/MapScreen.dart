@@ -82,7 +82,7 @@ class _MapScreenState extends State<MapScreen> {
     }
     // Mapbox ウィジェットを返す
     return MapboxMap(
-      accessToken: dotenv.env['MAPBOX_TOKEN'],
+      accessToken: dotenv.env['MAPBOX_ACCESS_TOKEN'],
       // 地図（スタイル）を指定（デフォルト地図の場合は省略可）
       styleString: _style,
       // 初期表示される位置情報を現在位置から設定
