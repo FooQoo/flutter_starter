@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/auth/AuthManager.dart';
+import 'package:flutter_starter/provider/AuthManager.dart';
 import 'package:flutter_starter/screen/Counter.dart';
 import 'package:flutter_starter/screen/Login.dart';
 import 'package:flutter_starter/screen/MapScreen.dart';
-import 'package:flutter_starter/screen/SignOutScreen.dart';
+import 'package:flutter_starter/screen/Profile.dart';
 import 'components/projects/BottomNavigationBarWidget.dart';
 import 'components/projects/Layout.dart';
 import 'types/NavbarItem.dart';
@@ -31,7 +31,7 @@ class MyApp extends ConsumerWidget {
       NavbarItem(
         icon: Icon(Icons.person),
         label: 'Profile',
-        widget: SignOutScreen(title: "Profile"),
+        widget: ProfileScreen(title: "Profile"),
       ),
     ],
   );
@@ -39,7 +39,7 @@ class MyApp extends ConsumerWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final _authManager = ref.watch(authManagerProvider);
+    final authManager = ref.watch(authManagerProvider);
 
     return MaterialApp(
         title: 'Flutter Demo',
@@ -55,10 +55,23 @@ class MyApp extends ConsumerWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: _authManager.isLoggedIn
-            ? const BottomNavigationBarWidget(
-                collection: _collection,
-              )
-            : const SignInScreen());
+        home: _buildHome(authManager));
+  }
+
+  Widget _buildHome(AuthManager authManager) {
+    switch (authManager.status) {
+      case AuthStatus.loading:
+        return const Scaffold(
+          body: Center(
+            child: CircularProgressIndicator(),
+          ),
+        );
+      case AuthStatus.logout:
+        return const SignInScreen();
+      case AuthStatus.login:
+        return const BottomNavigationBarWidget(
+          collection: _collection,
+        );
+    }
   }
 }
