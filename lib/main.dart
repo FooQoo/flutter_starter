@@ -9,7 +9,7 @@ Future main() async {
   await dotenv.load(fileName: '.env');
   WidgetsFlutterBinding.ensureInitialized();
   LineSDK.instance.setup("${dotenv.env['LINE_CHANNLE_ID']}").then((_) {
-    print("LineSDK Prepared");
+    logger.d("LineSDK Prepared");
   });
   runApp(
     const ProviderScope(

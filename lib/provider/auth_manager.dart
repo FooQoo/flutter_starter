@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_starter/repository/SecureStorageRepository.dart';
+import 'package:flutter_starter/repository/secure_storage_repository.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../repository/LineUserRepository.dart';
+import '../repository/line_user_repository.dart';
 
 final isAlreadyLoginProvider = FutureProvider<bool>((ref) async {
   // 瞬時に切り替えると画面がちらつくので、3秒待つ

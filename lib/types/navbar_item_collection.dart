@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'NavbarItem.dart';
+import 'navbar_item.dart';
 
 class NavbarItemCollection {
   final List<NavbarItem> items;

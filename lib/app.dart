@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/provider/AuthManager.dart';
-import 'package:flutter_starter/screen/Counter.dart';
-import 'package:flutter_starter/screen/Login.dart';
-import 'package:flutter_starter/screen/MapScreen.dart';
-import 'package:flutter_starter/screen/Profile.dart';
-import 'components/projects/BottomNavigationBarWidget.dart';
-import 'components/projects/Layout.dart';
-import 'types/NavbarItem.dart';
-import 'types/NavbarItemCollection.dart';
+import 'package:flutter_starter/provider/auth_manager.dart';
+import 'package:flutter_starter/screen/counter.dart';
+import 'package:flutter_starter/screen/login.dart';
+import 'package:flutter_starter/screen/map_screen.dart';
+import 'package:flutter_starter/screen/profile.dart';
+import 'components/projects/bottom_navigation_bar_widget.dart';
+import 'components/projects/layout.dart';
+import 'types/navbar_item.dart';
+import 'types/navbar_item_collection.dart';
+import 'package:logger/logger.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final logger = Logger();
 
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});
