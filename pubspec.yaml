@@ -39,7 +39,7 @@ dependencies:
   location: ^4.4.0
   flutter_dotenv: ^5.0.2
   flutter_line_sdk: ^2.3.0
-  flutter_hooks: ^0.18.0
+  flutter_hooks: ^0.20.0
   hooks_riverpod: ^2.0.0-dev.9
   flutter_svg: ^2.0.0
   flutter_secure_storage: ^8.0.0
