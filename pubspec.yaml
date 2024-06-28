@@ -36,7 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   mapbox_gl: ^0.16.0
-  location: ^4.4.0
+  location: ^7.0.0
   flutter_dotenv: ^5.0.2
   flutter_line_sdk: ^2.3.0
   flutter_hooks: ^0.18.0
