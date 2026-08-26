@@ -37,7 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   mapbox_gl: ^0.16.0
   location: ^8.0.0
-  flutter_dotenv: ^5.0.2
+  flutter_dotenv: ^6.0.0
   flutter_line_sdk: ^2.3.0
   flutter_hooks: ^0.18.0
   hooks_riverpod: ^2.0.0-dev.9
